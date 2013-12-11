@@ -213,7 +213,7 @@ function pathify(elem, root) {
     else if (ry && !elem.hasAttribute('rx')) rx = ry;
     arc_to = 'A'+ rx +','+ ry +',0,0,'+ (rx * ry < 0 ? 0 : 1) +',';
     path.setAttribute( 'd'
-                     , 'M'+ (x+rx) +','+ y +
+                     , 'M'+ (x+rx) +','+ y
                      + 'H'+ (x+w-rx)
                           + (r ? arc_to + (x+w) +','+ (y+ry) : '')
                      + 'V'+ (y+h-ry)
