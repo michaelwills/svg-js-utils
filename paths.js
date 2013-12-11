@@ -251,7 +251,7 @@ function pathify(elem, root) {
   }
 
   function polygon() {
-    for (var i = 0, l = [], pts = elem.points, p; i < pth.numberOfItems; i++) {
+    for (var i = 0, l = [], pts = elem.points, p; i < path.numberOfItems; i++) {
       p = pts.getItem(i);
       l[i] = p.x+','+p.y;
     }
@@ -271,7 +271,7 @@ function relatizePath(path) {
   return Raphael.pathToRelative(path).flatten().join(' ');
 }
 
-// Changes all path arc commands to béziers. Uses Raphael.path2curve:
+// Changes all path arc commands to bï¿½ziers. Uses Raphael.path2curve:
 // https://raw.github.com/DmitryBaranovskiy/raphael/master/raphael-min.js:
 function path2curve(path) {
   if ('string' !== typeof path && 'function' === typeof path.getAttribute)
